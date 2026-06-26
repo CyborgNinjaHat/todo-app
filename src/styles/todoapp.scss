@@ -1,0 +1,125 @@
+.todo-app {
+  margin: 40px 20px;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 24px;
+  font-weight: 300;
+  color: #4d4d4d;
+
+  &__content {
+    margin-bottom: 20px;
+    background: #fff;
+    box-shadow:
+      0 2px 4px 0 rgb(0 0 0 / 20%),
+      0 25px 50px 0 rgb(0 0 0 / 10%);
+  }
+
+  &__title {
+    font-size: 100px;
+    font-weight: 100;
+    color: rgb(175 47 47 / 15%);
+    text-align: center;
+    -webkit-text-rendering: optimizelegibility;
+    -moz-text-rendering: optimizelegibility;
+    text-rendering: optimizelegibility;
+  }
+
+  &__header {
+    position: relative;
+  }
+
+  &__toggle-all {
+    cursor: pointer;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 45px;
+    height: 100%;
+    border: 0;
+    font-size: 24px;
+    color: #e6e6e6;
+    background-color: transparent;
+
+    &::before {
+      content: '❯';
+      transform: translateY(2px) rotate(90deg);
+      line-height: 0;
+    }
+
+    &.active {
+      color: #737373;
+    }
+  }
+
+  &__new-todo {
+    width: 100%;
+    padding: 16px 16px 16px 60px;
+    border: none;
+    font-family: inherit;
+    font-size: 24px;
+    font-weight: inherit;
+    line-height: 1.4em;
+    color: inherit;
+    background: rgb(0 0 0 / 1%);
+    box-shadow: inset 0 -2px 1px rgb(0 0 0 / 3%);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+
+    &::placeholder {
+      font-weight: 300;
+      font-style: italic;
+      color: #e6e6e6;
+    }
+  }
+
+  &__main {
+    border-top: 1px solid #e6e6e6;
+  }
+
+  &__footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-sizing: content-box;
+    height: 20px;
+    padding: 10px 15px;
+    border-top: 1px solid #e6e6e6;
+    font-size: 14px;
+    color: #777;
+    text-align: center;
+    box-shadow:
+      0 1px 1px rgb(0 0 0 / 20%),
+      0 8px 0 -3px #f6f6f6,
+      0 9px 1px -3px rgb(0 0 0 / 20%),
+      0 16px 0 -6px #f6f6f6,
+      0 17px 2px -6px rgb(0 0 0 / 20%);
+  }
+
+  &__clear-completed {
+    cursor: pointer;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-family: inherit;
+    font-weight: inherit;
+    color: inherit;
+    text-decoration: none;
+    appearance: none;
+    background: none;
+    transition: opacity 0.3s;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+
+    &:hover {
+      text-decoration: underline;
+    }
+
+    &:active {
+      text-decoration: none;
+    }
+
+    &:disabled {
+      visibility: hidden;
+    }
+  }
+}
